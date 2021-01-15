@@ -31,7 +31,6 @@ a{
 header .cabeza{
     display: flex;
     Justify-content: space-between;
-    align-items: center;
 }
 .logo {
     width: 28px;
@@ -119,9 +118,8 @@ header nav .menu input:checked ~ span:nth-last-child(3) {
 header nav .menu input:checked ~ span:nth-last-child(2) {
     transform: rotate(-45deg) translate(1px, 0px);
 }
-/*menu simple con tamaño menor a 1000px*/
+/*menu simple con tamaño mayor a 1000px*/
 @media screen and (min-width: 1000px){
-
     header nav .menu ul {
         display: flex;
         list-style: none;
@@ -193,20 +191,23 @@ header nav .menu input:checked ~ span:nth-last-child(2) {
 @keyframes pulse{
     0%{
         transform: scale(.99);
-        box-shadow: 0 0 0 0 rgba( blue,  blue, blue, .1%);
+        box-shadow: 0 0 0 0 rgba(11, 11, 236, .1%);
     }
     70%{
         transform: scale(1);
-        box-shadow: 0 0 0 0 rgba( blue,  blue, blue, 0%);
+        box-shadow: 0 0 0 0 rgba(11, 11, 236, .0%);
     }
     100%{
         transform: scale(.99);
-        box-shadow: 0 0 0 0 rgba( blue,  blue, blue, 0%);
+        box-shadow: 0 0 0 0 rgba(11, 11, 236, .0%);
     }
 }
 .boton:hover{
     background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
     color: #FFFFFF;
+}
+#mundo{
+    text-decoration: line-through;
 }
 #punto{
     color: blue;
@@ -265,9 +266,14 @@ header nav .menu input:checked ~ span:nth-last-child(2) {
     align-items: center;
 }
 .spotify .reproductor{
-    width: 90%;   
+    width: 100%;   
     padding: 10px;
 } 
+.spotify .reproductor iframe{
+    height: 100%;
+    border: none;
+    background-color: transparent;
+}
 @media screen and (min-width: 1000px){
     .spotify{
         padding: 100px;
@@ -275,11 +281,11 @@ header nav .menu input:checked ~ span:nth-last-child(2) {
     .spotify .divisor{
         flex-direction: unset;
         align-items: unset;
-        padding: 100px;
+        padding: 80px;
     }
     .spotify .reproductor{
         width: 50%;   
-        padding: 31px;
+        padding: 25px;
     }
     .spotify h2{
         margin-left: 100px;
